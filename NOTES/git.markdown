@@ -64,11 +64,11 @@
 
 #### 以当前文件夹创建仓库,仓库创建成功文件夹会生产`.git`文件夹
 
-    ```bash
-    git init
-    ```
-
-    ![alt text](assets/image.png)
+```bash
+git init
+```
+    
+![alt text](assets/image.png)
 
 #### 添加文件到暂存区
 
@@ -90,9 +90,9 @@
 
 #### 将暂存区的文件提交到仓库
 
-    ```bash
-    git commit
-    ```
+```bash
+git commit
+```
 
 #### 查看状态
 

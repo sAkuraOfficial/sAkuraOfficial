@@ -67,7 +67,7 @@
 ```bash
 git init
 ```
-    
+
 ![alt text](assets/image.png)
 
 #### 添加文件到暂存区
@@ -138,4 +138,74 @@ git status
 
     ```bash
     git --no-pager reflog
+    ```
+
+### 如何忽略指定文件?
+
+创建`.gitignore`文件即可
+使用例子:
+
+```.girignore
+/.vscode
+/.idea
+*.a
+*.o
+/out
+qwq.txt
+```
+
+## 中级指令
+
+### 创建,查看分支
+
+1. 创建分支
+   此命令将以当前所在分支的基础上,创建一个新的分支
+    ```bash
+    git branch 分支名
+    ```
+2. 查看仓库所有分支
+    ```bash
+    git branch
+    ```
+
+### 切换到指定分支
+
+1. 新命令
+    ```bash
+    git switch 分支名
+    ```
+2. 旧版命令
+    ```bash
+    git checkout 分支名
+    ```
+3. 创建并切换到指定新分支
+    ```bash
+    git checkout -b 新分支名
+    ```
+
+### 合并两个分支
+
+将当前分支与另外一个分支合并
+
+```bash
+git merge 被合并分支名
+```
+
+### 处理两个分支的冲突
+
+1. 先使用`git merge`命令合并两个分支
+2. 紧接着 git 系统会提示某文件存在冲突
+3. 使用编辑其对存在冲突的文件进行修改
+4. 使用`git add`命令将修改后的文件加入暂存区
+5. 使用`git commit`命令将合并提交到仓库
+
+### 删除分支
+
+1. 正常删除,git 会检查能否安全删除
+    ```bash
+    git branch -d 被删除分支名
+    ```
+2. 强制删除分支,不做任何检查
+    ```bash
+    git branch -D 被删除分支名
     ```
